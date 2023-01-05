@@ -7,10 +7,16 @@ plugins:
 
 provider:
   name: aws
+  architecture: x86_64
   runtime: nodejs16.x
+  memorySize: 512
   timeout: 15
+  tracing:
+    apiGateway: false
+    lambda: false
   httpApi:
-    cors: true
+    metrics: true
+    cors: true  
 
 functions:
   graphql:
