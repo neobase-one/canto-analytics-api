@@ -2,7 +2,7 @@ import Decimal from "decimal.js";
 
 export const BaseFee = `
 type BaseFee {
-    timestamp: String
+    timestamp: DateTime
     baseFee: Decimal
 }
 `

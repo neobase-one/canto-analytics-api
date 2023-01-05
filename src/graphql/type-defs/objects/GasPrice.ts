@@ -2,7 +2,7 @@ import Decimal from "decimal.js";
 
 export const GasPrice = `
 type GasPrice {
-    timestamp: String
+    timestamp: DateTime
     gasPrice: Decimal
 }
 `

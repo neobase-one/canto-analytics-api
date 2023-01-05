@@ -2,8 +2,8 @@ import Decimal from "decimal.js";
 
 export const BaseFeeInput = `
 input BaseFeeInput {
-    start: String # unix time
-    end: String # unix time
+    start: DateTime # unix time
+    end: DateTime # unix time
     range: Int # seconds
 }
 `

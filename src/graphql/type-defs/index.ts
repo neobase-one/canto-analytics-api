@@ -8,11 +8,13 @@ import { BaseFee } from './objects/BaseFee';
 import { GasPrice } from './objects/GasPrice';
 // Root types
 import { Query } from './root/Query'; // tslint:disable-line ordered-imports
+import { DateTimeScalar } from './scalars/DateTime';
 import { DecimalScalar } from './scalars/Decimal';
 
 const typeDefStrings = [
   // Scalar
   DecimalScalar,
+  DateTimeScalar,
   // Inputs
   BaseFeeInput,
   GasPriceInput,
