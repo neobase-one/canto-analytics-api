@@ -1,35 +1,23 @@
-<!--
-title: 'AWS Apollo Lambda (NodeJS & Typescript)'
-description: 'This example provides a setup for a Lambda Graphql API with apollo'
-layout: Doc
-framework: v1
-platform: AWS
-language: nodeJS
-priority: 10
-authorLink: 'https://github.com/jmpfrazao'
-authorName: 'Miguel Frazao'
-authorAvatar: 'https://avatars3.githubusercontent.com/u/28927258?s=460&v=4'
--->
-# Apollo Lambda GraphQL API Example
-This example demonstrates how to setup a lambda graphql API with apollo
+# Canto Analytics API
+Custom SQL queries for some metrics
 
-- I used apiKeys to secure the endpoints but you can add custom authorizers
+## Local Development
+### Env
+```
+nvm install 16.16
+nvm use 16.16
+yarn install
 
-## Use Cases
-- Small graphql API
-- Creating a temporary lambda API that can easily be converted to standard GraphQL API
+# create .env file similar to env.example
+```
 
-## Setup
-- Setup your env file for AWS deployment with:
-  - - APOLLO_LAMBDA_KEY
-  - - NODE_ENV
+### Test Serverless Function Locally
+```
+serverless offline
+```
 
-- sls deploy
-
-## Usage
-- To test it locally with serverless-offline by running: 
-  `npm run dev`
-- set `x-api-key` header with key `your-api-key-that-is-at-least-characters-long`
-
-## Future
-- Add support for subscription with Redis
+### Deploy to AWS Lambda
+```
+# need aws cli configured w cloud-formation access
+serverless deploy
+```

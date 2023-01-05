@@ -4,7 +4,7 @@ import { resolvers } from './resolvers';
 import typeDefs from './type-defs';
 import { startServerAndCreateLambdaHandler } from '@as-integrations/aws-lambda';
 
-// const NODE_ENV = process.env.NODE_ENV || 'production';
+const NODE_ENV = process.env.NODE_ENV || 'production';
 
 
 const server = new ApolloServer({
