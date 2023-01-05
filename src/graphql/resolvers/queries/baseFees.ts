@@ -1,4 +1,3 @@
-import Decimal from "decimal.js"
 import { IBaseFeeInput } from "../../type-defs/inputs/BaseFeeInput"
 import { IBaseFee } from "../../type-defs/objects/BaseFee"
 import { Client } from 'pg'
@@ -21,6 +20,7 @@ function dbQuery(args: IBaseFeeInput): Promise<IBaseFee[]> {
             client.end()
                 .then(() => console.log('client has disconnected'))
                 .catch((err) => console.error('error during disconnection', err.stack))
+            // transform object into graphql type
             return result.rows.map(row => {
                 return {timestamp: row.timestamp, baseFee: row.basefee}
             });
