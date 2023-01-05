@@ -49,6 +49,7 @@ function sqlQuery(args: IBaseFeeInput): {name: string, text: string, values: any
         )  as multi
         GROUP BY range_timestamp
         ORDER BY range_timestamp DESC
+        LIMIT 2000
     `
     return {
         name: "block-base-fee-in-timerange",

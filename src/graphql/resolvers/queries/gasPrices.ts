@@ -51,6 +51,7 @@ function sqlQuery(args: IGasPriceInput): {name: string, text: string, values: an
         )  as multi
         GROUP BY range_timestamp
         ORDER BY range_timestamp DESC
+        LIMIT 2000
     `
     return {
         name: "transaction-gas-price-in-timerange",
