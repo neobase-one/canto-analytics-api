@@ -10,7 +10,7 @@ provider:
   architecture: x86_64
   runtime: nodejs16.x
   memorySize: 512
-  timeout: 10
+  timeout: 15
   tracing:
     apiGateway: false
     lambda: false
@@ -22,7 +22,6 @@ functions:
   graphql:
     handler: src/handler.graphqlHandler
     events:
-      - http:
+      - httpApi:
           path: /
           method: POST
-          cors: true
