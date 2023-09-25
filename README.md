@@ -31,3 +31,7 @@ serverles deploy --aws-profile profileName
 - AWSLambda_FullAccess
 - CloudWatchLogsFullAccess
 - IAMFullAccess
+
+
+### Note
+- delete cloudformation attempt if you see this error `is in ROLLBACK_COMPLETE state and can not be updated`
