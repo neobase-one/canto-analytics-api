@@ -20,4 +20,14 @@ serverless offline
 ```
 # need aws cli configured w cloud-formation access
 serverless deploy
+# OR
+serverles deploy --aws-profile profileName
 ```
+
+### AWS CLI IAM access
+- AmazonAPIGatewayAdministrator
+- AmazonS3FullAccess
+- AWSCloudFormationFullAccess
+- AWSLambda_FullAccess
+- CloudWatchLogsFullAccess
+- IAMFullAccess
